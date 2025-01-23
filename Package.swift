@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "shared",
+    name: "sharedSPM",
     platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "shared",
+            name: "sharedSPM",
             type: .dynamic,
-            targets: ["shared"]),
+            targets: ["sharedSPM"]),
     ],
     dependencies: [
         .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git", from: "3.8.0")
@@ -20,9 +20,17 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "shared"),
+            name: "sharedSPM",
+            dependencies: [
+                .target(name: "shared"),
+                .product(name: "CocoaLumberjack", package: "CocoaLumberjack")
+            ]
+        ),
         .testTarget(
             name: "sharedTests",
-            dependencies: ["shared"]),
+            dependencies: ["sharedSPM"]),
+        .binaryTarget(name: "shared",
+                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.0/shared.xcframework.zip",
+                      checksum: "69b0116782f62fb073473445d4ccce3962f54e4d5c016199698648a6f2f1cc93")
     ]
 )
