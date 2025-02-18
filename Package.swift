@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git", from: "3.8.0"),
-        .package(url: "https://github.com/robbiehanson/CocoaAsyncSocket", from: "7.6.4")
+        .package(url: "https://github.com/mlorincz/papertrail-lumberjack-ios.git", exact: "2.1.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -25,14 +25,14 @@ let package = Package(
             dependencies: [
                 .target(name: "shared"),
                 .product(name: "CocoaLumberjack", package: "CocoaLumberjack"),
-                .product(name: "CocoaAsyncSocket", package: "CocoaAsyncSocket")
+                .product(name: "PaperTrailLumberjack", package: "papertrail-lumberjack-ios")
             ]
         ),
         .testTarget(
             name: "sharedTests",
             dependencies: ["sharedSPM"]),
         .binaryTarget(name: "shared",
-                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.2/shared.xcframework.zip",
+                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.3/shared.xcframework.zip",
                       checksum: "dddb3e896f71e027ee39e86d9c3c95559f78b1f79f0e4e99e026518616048ab7")
     ]
 )
