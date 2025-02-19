@@ -1,5 +1,5 @@
 {
-  "originHash" : "a6746fb26771c286d8450b3dfb344741ae8551abdc0c2dcba0089e03eecdf779",
+  "originHash" : "b8a86b9b871dea5eec173be5083a1b8fc14d88c6174f6f400adc85d0062169d4",
   "pins" : [
     {
       "identity" : "cocoaasyncsocketdynamic",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/spvagelis/papertrail-lumberjack-ios.git",
       "state" : {
-        "revision" : "a844c4d4988b2f0db1f335f179e9d7420fba451b",
-        "version" : "2.1.1"
+        "revision" : "10ae4a1a4113b4f815f689d34f6bf2ec1707840d",
+        "version" : "2.1.2"
       }
     },
     {
