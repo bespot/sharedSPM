@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git", from: "3.8.0"),
-        .package(url: "https://github.com/spvagelis/papertrail-lumberjack-ios.git", branch: "master")
+        .package(url: "https://github.com/spvagelis/papertrail-lumberjack-ios.git", exact: "2.1.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -32,7 +32,7 @@ let package = Package(
             name: "sharedTests",
             dependencies: ["sharedSPM"]),
         .binaryTarget(name: "shared",
-                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.4/shared.xcframework.zip",
+                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.5/shared.xcframework.zip",
                       checksum: "dddb3e896f71e027ee39e86d9c3c95559f78b1f79f0e4e99e026518616048ab7")
     ]
 )
