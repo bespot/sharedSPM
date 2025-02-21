@@ -1,5 +1,5 @@
 {
-  "originHash" : "4fbec71952dd45fcdbfe5f557cfbdfaf8fd24ef1c37487380e1a3ac94db16859",
+  "originHash" : "ba13458d60cb11c1081dfec65fa70a5cab962f3a5c35ddece31d07a3b287eab3",
   "pins" : [
     {
       "identity" : "cocoaasyncsocketdynamic",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/spvagelis/CocoaLumberjack.git",
       "state" : {
-        "revision" : "d344df314f44bf0406c848abfd4dcf3ff02b1f05",
-        "version" : "3.8.8"
+        "revision" : "0c43c6510a0a63ae7846624978e05eeca7d56b31",
+        "version" : "3.8.9"
       }
     },
     {
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/spvagelis/papertrail-lumberjack-ios.git",
       "state" : {
-        "revision" : "f039ba738b0a32bb0d5aba7fae041a88ab370b4c",
-        "version" : "2.1.5"
+        "revision" : "dc60f8550c9d72f6f2cc48536f306e2d006ee362",
+        "version" : "2.1.6"
       }
     },
     {
