@@ -32,7 +32,7 @@ let package = Package(
             name: "sharedTests",
             dependencies: ["sharedSPM"]),
         .binaryTarget(name: "shared",
-                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.10/shared.xcframework.zip",
-                      checksum: "dddb3e896f71e027ee39e86d9c3c95559f78b1f79f0e4e99e026518616048ab7")
+                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.11/shared.xcframework.zip",
+                      checksum: "4024f527ff6cf799322550ae6d756d97b4a222a4c50a5e88f6e2c3f661ff08d7")
     ]
 )
