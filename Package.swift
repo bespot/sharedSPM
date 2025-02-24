@@ -14,7 +14,6 @@ let package = Package(
             targets: ["sharedSPM"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/spvagelis/CocoaLumberjack.git", from: "3.8.9"),
         .package(url: "https://github.com/spvagelis/papertrail-lumberjack-ios.git", exact: "2.1.6")
     ],
     targets: [
@@ -24,7 +23,6 @@ let package = Package(
             name: "sharedSPM",
             dependencies: [
                 .target(name: "shared"),
-                .product(name: "CocoaLumberjack", package: "CocoaLumberjack"),
                 .product(name: "PaperTrailLumberjack", package: "papertrail-lumberjack-ios")
             ]
         ),
@@ -32,7 +30,7 @@ let package = Package(
             name: "sharedTests",
             dependencies: ["sharedSPM"]),
         .binaryTarget(name: "shared",
-                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.12/shared.xcframework.zip",
+                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.13/shared.xcframework.zip",
                       checksum: "6816d4c401cc4ccb1a6659866fdeae84e0d569afadc5e949748f91642bbaebba")
     ]
 )
