@@ -14,7 +14,7 @@ let package = Package(
             targets: ["sharedSPM"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/spvagelis/papertrail-lumberjack-ios.git", exact: "2.1.6")
+        //.package(url: "https://github.com/spvagelis/papertrail-lumberjack-ios.git", exact: "2.1.6")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -23,15 +23,15 @@ let package = Package(
             name: "sharedSPM",
             dependencies: [
                 .target(name: "shared"),
-                .product(name: "PaperTrailLumberjack", package: "papertrail-lumberjack-ios")
+                //.product(name: "PaperTrailLumberjack", package: "papertrail-lumberjack-ios")
             ]
         ),
         .testTarget(
             name: "sharedTests",
             dependencies: ["sharedSPM"]),
-        .binaryTarget(name: "shared", path: "./Sources/shared.xcframework")
-       // .binaryTarget(name: "shared",
-         //             url: "https://github.com/bespot/sharedSPM/releases/download/1.0.13/shared.xcframework.zip",
-           //           checksum: "6816d4c401cc4ccb1a6659866fdeae84e0d569afadc5e949748f91642bbaebba")
+        //.binaryTarget(name: "shared", path: "./Sources/shared.xcframework")
+        .binaryTarget(name: "shared", 
+                      url: "https://github.com/bespot/sharedSPM/releases/download/1.0.1/shared.xcframework.zip", 
+                      checksum: "765656bc97f6b8290ad9ba79fbdac447e7ed85689830b5183b7329351487b568")
     ]
 )
