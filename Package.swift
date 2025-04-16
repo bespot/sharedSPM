@@ -9,9 +9,9 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "sharedSPM",
-            type: .dynamic,
-            targets: ["sharedSPM"]),
+            name: "shared",
+            //type: .dynamic,
+            targets: ["shared"]),
     ],
     dependencies: [
         //.package(url: "https://github.com/spvagelis/papertrail-lumberjack-ios.git", exact: "2.1.6")
@@ -19,16 +19,16 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "sharedSPM",
-            dependencies: [
-                .target(name: "shared"),
-                //.product(name: "PaperTrailLumberjack", package: "papertrail-lumberjack-ios")
-            ]
-        ),
+//        .target(
+//            name: "shared",
+//            dependencies: [
+//                //.target(name: "shared"),
+//                //.product(name: "PaperTrailLumberjack", package: "papertrail-lumberjack-ios")
+//            ]
+//        ),
         .testTarget(
             name: "sharedTests",
-            dependencies: ["sharedSPM"]),
+            dependencies: ["shared"]),
         //.binaryTarget(name: "shared", path: "./Sources/shared.xcframework")
         .binaryTarget(name: "shared", 
                       url: "https://github.com/bespot/sharedSPM/releases/download/2.0.1/shared.xcframework.zip", 
