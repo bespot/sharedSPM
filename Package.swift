@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "sharedSPM",
+    name: "shared",
     platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -31,7 +31,7 @@ let package = Package(
             dependencies: ["shared"]),
         //.binaryTarget(name: "shared", path: "./Sources/shared.xcframework")
         .binaryTarget(name: "shared", 
-                      url: "https://github.com/bespot/sharedSPM/releases/download/2.0.3/shared.xcframework.zip", 
+                      url: "https://github.com/bespot/sharedSPM/releases/download/2.0.4/shared.xcframework.zip", 
                       checksum: "765656bc97f6b8290ad9ba79fbdac447e7ed85689830b5183b7329351487b568")
     ]
 )
